@@ -1,12 +1,12 @@
 1) create a new repo on github
 
-git clone git@github.com:RobertBerger/meta-rauc.git
+git clone git@github.com:RobertBerger/bitbake.git
 
 2) add my-scripts dir
 
-cd meta-rauc
+cd bitbake
 
-echo "# meta-rauc fork" >> README.md
+echo "# bitbake fork" >> README.md
 
 git init
 
@@ -20,57 +20,25 @@ git push -u origin master
 
 3) use my repo
 
-mv meta-rauc meta-rauc.ori
-git clone git@github.com:RobertBerger/meta-rauc.git
+mv bitbake bitbake.ori
+git clone git@github.com:RobertBerger/bitbake.git
 
 4) add upstream
 
-cd meta-rauc
+cd bitbake
 
-git remote add official-upstream https://github.com/rauc/meta-rauc.git
+git remote add official-upstream https://git.openembedded.org/bitbake
 
 $ git fetch official-upstream
 
 warning: no common commits
-remote: Enumerating objects: 2766, done.
-remote: Counting objects: 100% (1066/1066), done.
-remote: Compressing objects: 100% (546/546), done.
-remote: Total 2766 (delta 662), reused 521 (delta 515), pack-reused 1700 (from 4)
-Receiving objects: 100% (2766/2766), 432.22 KiB | 5.14 MiB/s, done.
-Resolving deltas: 100% (1445/1445), done.
-From https://github.com/rauc/meta-rauc
- * [new branch]      dunfell    -> official-upstream/dunfell
- * [new branch]      gatesgarth -> official-upstream/gatesgarth
- * [new branch]      hardknott  -> official-upstream/hardknott
- * [new branch]      honister   -> official-upstream/honister
- * [new branch]      kirkstone  -> official-upstream/kirkstone
- * [new branch]      krogoth    -> official-upstream/krogoth
- * [new branch]      langdale   -> official-upstream/langdale
- * [new branch]      master     -> official-upstream/master
- * [new branch]      mickledore -> official-upstream/mickledore
- * [new branch]      morty      -> official-upstream/morty
- * [new branch]      nanbield   -> official-upstream/nanbield
- * [new branch]      pyro       -> official-upstream/pyro
- * [new branch]      rocko      -> official-upstream/rocko
- * [new branch]      scarthgap  -> official-upstream/scarthgap
- * [new branch]      styhead    -> official-upstream/styhead
- * [new branch]      sumo       -> official-upstream/sumo
- * [new branch]      thud       -> official-upstream/thud
- * [new branch]      walnascar  -> official-upstream/walnascar
- * [new branch]      warrior    -> official-upstream/warrior
- * [new branch]      whinlatter -> official-upstream/whinlatter
- * [new branch]      wrynose    -> official-upstream/wrynose
- * [new branch]      zeus       -> official-upstream/zeus
-
 ...
 
 5) use specific upstream branch and make our own branch
 
 git co remotes/official-upstream/master
 
-5.1) we want commit: 01f7e1bbde162263bcfb93fd5a3bcdd1483f688c
-
-git co 01f7e1bbde162263bcfb93fd5a3bcdd1483f688c
+5.1) we want to try master
 
 git branch 2026-08-11-training
 
